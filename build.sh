@@ -7,5 +7,5 @@ pip install -r requirements.txt
 
 poetry install
 
-python manage.py collectstatic
-python manage.py migrate
+python main.py collectstatic
+python main.py migrate
