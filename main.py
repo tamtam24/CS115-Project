@@ -87,8 +87,8 @@ def evaluate(image_test,global_df_vectors, global_centroids):
   return result
 
 #build web Flask
-app = Flask(__name__)
-@app.route('/', methods=['GET', 'POST'])
+main = Flask(__name__)
+@main.route('/', methods=['GET', 'POST'])
 
 def index():
     if request.method == 'POST':
@@ -112,5 +112,3 @@ def index():
 
 if __name__=="__main__":
     main=Flask(__name__)
-
-   
