@@ -43,7 +43,7 @@ def spectral_clustering(df, n_neighbors, num_ev, n_clusters):
     cluster = run_k_means(proj_df, n_clusters)
     return cluster
 
-cluster = spectral_clustering(df=df[df.columns[0:4096]], n_neighbors=4,num_ev=30, n_clusters=5)
+cluster = spectral_clustering(df=df[df.columns[0:4096]], n_neighbors=5,num_ev=20, n_clusters=30)
 df['cluster'] = pd.Series(cluster, index=df.index)
 
 # Select only numeric columns for the mean calculation
