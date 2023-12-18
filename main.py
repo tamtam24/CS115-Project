@@ -75,8 +75,8 @@ def evaluate(image_test,global_df_vectors, global_centroids):
   df_vect = df_vect.sort_index()
 
   #Lấy ra kết quả ảnh giống nhất với ảnh query trong cluster
-  result = df_vect[0:1] 
-  #So sánh với nhãn để đánh giá true/false
+  result = df_vect[0:4] 
+
   content_compare = []
   for content in result['Content']: 
     content_compare.append(content)
@@ -97,7 +97,7 @@ def index():
         img = Image.open(file)  # PIL image
         uploaded_img_path = "static/uploaded/"+ file.filename
         img.save(uploaded_img_path)
-        # lấy content là 3 kí tự đầu của tên query image để evaluate kết quả
+     
         result = evaluate(uploaded_img_path, global_df_vectors, global_centroids)
         # Lấy kết quả và gửi đến html
         rs = result[['Path','Content_compare']]  

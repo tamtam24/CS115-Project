@@ -52,15 +52,15 @@
         </div>
             {% if query_path %}
             <h5>ẢNH CỦA BẠN: </h5>
-            <img src="{{ query_path }}" width="400px">
-            <h5>BẠN GIỐNG VỚI NGƯỜI NỔI TIẾNG NÀO NHẤT: </h5>
+            <img src="{{ query_path }}" width="200px">
+            <h5>BẠN GIỐNG VỚI NGƯỜI NỔI TIẾNG NÀO : </h5>
             
             <h6>
              <figcaption>{{ precision }}</figcaption>
             </h6>
             {% for score in scores %}
             <figure style="float: left; margin-right: 50px; margin-bottom: 50px;">
-                <img  src="{{ score[0] }}" height="500px">
+                <img  src="{{ score[0] }}" height="200px">
                 {% if score[1] %}
                    <h6><figcaption style="color: green;">{{ score[1] }}</figcaption></h6>
                 
